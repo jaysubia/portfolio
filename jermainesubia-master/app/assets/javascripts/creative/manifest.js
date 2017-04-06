@@ -1,0 +1,20 @@
+//= require jquery
+//= require jquery_ujs
+//= require bootstrap
+//= require jquery.backstretch
+//= require owl.carousel
+//= require magnific-popup
+//= require creative/jquery.easing.min
+//= require creative/jquery.fittext
+//= require wow
+//= require creative/creative
+//= require creative/custom
+//= require creative/jqBootstrapValidation
+//= require creative/jquery.countTo
+//= require creative/jquery.fitvids
+//= require creative/jquery.simple-text-rotator
+//= require creative/jquery.simple-text-rotator.min
+//= require jquery.waypoints
+//= require creative/smoothscroll
+//= require_self
+
