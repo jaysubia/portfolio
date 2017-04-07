@@ -14,11 +14,11 @@
 
 						<ul class="icon-list">
 							<li><i class="fa fa-fw fa-map-marker"></i>Long Beach,CA, US</li>
-							<li><i class="fa fa-fw fa-phone"></i>123 4567 8910</li>
+							<li><i class="fa fa-fw fa-phone"></i>562-449-2294</li>
 							<li><i class="fa fa-fw fa-envelope-o"></i><a href="mailto:">jermainesubia@gmail.com</a></li>
 						</ul>
-						<a href="/Resume_Jermaine_Subia.pdf" class="btn btn-default btn-custom-2"><i class="fa fa-cloud-download icon-before"></i> Download CV</a>
-					
+							<a href="/Resume_Jermaine_Subia.pdf"><button class="btn btn-custom-1">
+								<i class="fa fa-cloud-download icon-before"></i> Download CV
 
 
 					</div>
@@ -26,22 +26,29 @@
 
 					<div Mclass="col-md-6 wow bounceInRight">
 
-						<form id="contact-form" role="form" novalidate>
+						<form id="contact-form" role="form" method="post" action="contacts#create">
+						 <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
 
 							<div class="form-group">
-								<label class="sr-only" for="name">Name</label>
-								<input type="text" id="name" class="form-control" name="name" placeholder="Name" required="">
+								<label class="sr-only" for="name">First Name</label>
+								<input type="text" id="name" class="form-control" name="contact[first_name]" placeholder="First Name" required="">
+								<p class="help-block text-danger"></p>
+							</div>
+
+							<div class="form-group">
+								<label class="sr-only" for="name">Last Name</label>
+								<input type="text" id="name" class="form-control" name="contact[last_name]" placeholder="Last Name" required="">
 								<p class="help-block text-danger"></p>
 							</div>
 
 							<div class="form-group">
 								<label class="sr-only" for="email">Email address</label>
-								<input type="email" id="email" class="form-control" name="email" placeholder="E-mail" required="">
+								<input type="email" id="email" class="form-control" name="contact[email]" placeholder="E-mail" required="">
 								<p class="help-block text-danger"></p>
 							</div>
 
 							<div class="form-group">
-								<textarea class="form-control" id="message" name="message" rows="7" placeholder="Your message" required=""></textarea>
+								<textarea class="form-control" id="message" name="contact[message]" rows="7" placeholder="Your message" required=""></textarea>
 								<p class="help-block text-danger"></p>
 							</div>
 
@@ -51,7 +58,6 @@
 
 						</form>
 
-						<div id="contact-response"></div>
 
 					</div>
 

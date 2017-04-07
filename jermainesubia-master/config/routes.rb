@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'contacts/index'
+
   get 'document/download'
 
   root 'creatives#index'
@@ -18,6 +20,12 @@ Rails.application.routes.draw do
   get 'administrators/new'
 
   resources :users do
+   member do
+    get :delete
+  end
+end
+
+  resources :contacts do
    member do
     get :delete
   end
